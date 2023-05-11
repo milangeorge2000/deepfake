@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('static/img.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            color: #fff;
+        }
+        h3 {
+            text-align: center;
+            font-size: 24px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            color: #fff;
+        }
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 50px;
+            font-size: 18px;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Prediction Result</h1>
+    {% if result is none %}
+        <h3>Error: No result found</h3>
+    {% else %}
+        <h3>{{ result }}</h3>
+    {% endif %}
+    <br>
+    <a href="/">Upload Another Video</a>
+</body>
+</html>
